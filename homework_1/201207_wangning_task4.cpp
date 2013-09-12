@@ -1,3 +1,8 @@
+/*
+    功能：数组的简单操作
+    作者：wangning
+    日期：2013-9-6
+*/
 #include <iostream>
 #include <stdlib.h>
 
