@@ -30,6 +30,6 @@ int main(void)
         cout << str[i] << endl;
     }
 
-    delete str;
+    delete[] str;
     return 0;
 }
