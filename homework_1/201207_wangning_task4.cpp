@@ -7,15 +7,17 @@
 
 using namespace std;
 
-int check(int *numArray,int checkNum,int sum,int len)
+int check(int *numArray,int checkNum,int index,int len)
 {
-    for(int i = 0; i < len; i++)
+    int sum = 0;
+    for(int i = index; i < len; i++)
     {
         if(numArray[i] == checkNum)
         {
             sum += 1;
         }
     }
+
     return sum;
 }
 
@@ -32,7 +34,11 @@ int main()
 
     for(i = 0; i < 10; i++)
     {
-       cout << numArray[i] << "出现" << check(numArray,numArray[i],0,10) << "次"  << endl;
+        if(numArray[i] == numArray[i-1])
+        {
+            continue;
+        }
+        cout << numArray[i] << "出现" << check(numArray,numArray[i],i,10) << "次"  << endl;
     }
 
     delete[] numArray;
