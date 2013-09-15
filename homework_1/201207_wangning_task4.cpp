@@ -32,7 +32,7 @@ int main()
         cin >> numArray[i];
     }
 
-    for(i = 0; i < 10; i++)
+    for(i = 1; i < 10; i++)
     {
         if(numArray[i] == numArray[i-1])
         {
