@@ -1,6 +1,11 @@
 #ifndef _DYNAMICARRAY_H
 #define _DYNAMICARRAY_H
 
+#define FALSE 0
+#define TRUE 1
+#define OK 1
+#define DYNAMICARRAYSIZEUNIT 10
+
 class DynamicArray 
 {
 public:
@@ -14,10 +19,11 @@ public:
 	bool remove( int aIndex, int aValue );
 	const int *begin() const;
 	const int *end() const;
-	(const int aIndex) const;
+	int at(const int aIndex) const;
 private:
 	int *m_array;
 	int m_arrayLength;
+	int m_arraySize;
 };
 
 #endif
